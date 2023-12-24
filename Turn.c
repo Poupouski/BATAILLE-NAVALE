@@ -131,7 +131,7 @@ void ennemyTurn(Game* game){
                 fprintf(stderr,"Erreur de paramètre");
                 exit(2);
         }
-        while(do_replay == 1){
+        while(do_replay == 1 && nbBoatAlive != 0){
                 printf("L'ennemi se prépare à tirer !\n");
                 sleep(2);
                 do_replay = bot_Missile_Shoot(game->tab_player);
