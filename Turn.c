@@ -101,7 +101,7 @@ void playerTurn(Game* game){
         }
         printf(" --- TABLEAU ENNEMI ---\n\n");
         ennemyBoardDisplay(game->tab_bot);
-        while(do_replay == 1 && nbBoatAlive != 0){
+        while(do_replay == 1 && nbBoatAlive != 0){            //The player can shoot again while he touch an ennemy boat and the game is not finished
                 do_replay = missileShoot(game->tab_bot);
                 nbBoatAlive = howManyAlive(game->boat_tab_bot,game->tab_bot);
                 sleep(2);
@@ -131,7 +131,7 @@ void ennemyTurn(Game* game){
                 fprintf(stderr,"Erreur de paramètre");
                 exit(2);
         }
-        while(do_replay == 1 && nbBoatAlive != 0){
+        while(do_replay == 1 && nbBoatAlive != 0){               //The bot can shoot again while he touch an ennemy boat and the game is not finished
                 printf("L'ennemi se prépare à tirer !\n");
                 sleep(2);
                 do_replay = bot_Missile_Shoot(game->tab_player);
