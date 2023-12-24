@@ -8,7 +8,7 @@
  * @date December 24, 2023
  */
 
-        #define BOAT_NB 7   /**< Number of boats in the game. */
+        #define BOAT_NB 6   /**< Number of boats in the game. */
         #define PLATE_SIZE 10     /**< Size of the game board. */
 
         #include <stdio.h>
